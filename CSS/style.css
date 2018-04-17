@@ -7,4 +7,12 @@ body {
 	width: 285px;
 	border: 10px solid black;
 	padding: 60px;
+
+	/* to center the container */ 
+	margin: auto;
+}
+
+.container * {
+	display: block;
+	margin: auto;
 }
