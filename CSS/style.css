@@ -30,3 +30,17 @@ body {
 .container img{
 	padding-bottom: 40px;
 }
+
+button {
+	padding: 15px 30px;
+	box-radius: 10px;
+	box-shadow: 1px 4px 6px lightgrey;
+	background-color: pink;
+}
+
+button a {
+	color: white;
+	font-weight:  bold;
+	font-size: 13px;
+}
+
