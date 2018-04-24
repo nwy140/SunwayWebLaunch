@@ -12,6 +12,8 @@ body {
 	box-shadow: 2px 6px 285px lightgrey;
 	/* to center the container */ 
 	margin: auto;
+
+	display: inline-block;
 }
 
 .container * {
@@ -44,3 +46,6 @@ button a {
 	font-size: 13px;
 }
 
+.items-container {
+	text-align: center;
+}
