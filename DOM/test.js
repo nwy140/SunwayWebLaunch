@@ -12,12 +12,18 @@
     alert(classText[0].innerText);
   }
 
-  function getElementByTagNameEg() {
+
+  // getElementById
+
+
+  //getElementByTagName
+function getElementByTagNameEg() {
     var tagname = document.getElementsByTagName("h3");
     alert(tagname[0].innerHTML);
   }
 
-  function createElementEg() {
+  //createElement
+function createElementEg() {
     var liText = prompt("Enter your item here: ");
     var newLi = document.createElement("LI");
     var createNew = document.createTextNode(liText);
@@ -25,21 +31,29 @@
     document.getElementById("list").appendChild(newLi);
   }
 
+  //getElementStyle
+
   function getElementStyle() {
     var element = document.getElementById("colorEg");
     alert("The color of the text is " + element.style.color);
   }
 
+
+  //changeElementStyle
   function changeElementStyle() {
     var element = document.getElementById("colorChanger");
     element.style.color = "green";
-  }
+  }  
 
+  
+
+  //element.style.property
   function changeColorHover(color) {
     var element = document.getElementById("colorHover");
     element.style.color = color;
   }
 
+  //appendChild
   function addItem() {
     if(document.getElementById("todolist").childNodes.length > 3) {
       alert("You already have 3 items!");
@@ -51,8 +65,9 @@
       newLi.appendChild(createNew);
       document.getElementById("todolist").appendChild(newLi);
     }
-  }
+  } 
 
+  //removeChild
   function removeItem() {
     var list = document.getElementById("todolist");
     list.removeChild(list.childNodes[0]);
@@ -82,6 +97,7 @@
     }
   }
 
+  //print loop
   function looper(input) {
     var objectSize = 0;
     while(objectSize < Object.keys(fruits).length){
@@ -94,6 +110,7 @@
     }
   }
 
+  //clearing list
   function clearFruits() {
     var list = document.getElementById("loopTest");
     while(list.firstChild){
