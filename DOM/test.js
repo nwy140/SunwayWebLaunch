@@ -12,10 +12,6 @@
     alert(classText[0].innerText);
   }
 
-
-  // getElementById
-
-
   //getElementByTagName
 function getElementByTagNameEg() {
     var tagname = document.getElementsByTagName("h3");
@@ -24,11 +20,11 @@ function getElementByTagNameEg() {
 
   //createElement
 function createElementEg() {
-    var liText = prompt("Enter your item here: ");
-    var newLi = document.createElement("LI");
-    var createNew = document.createTextNode(liText);
-    newLi.appendChild(createNew);
-    document.getElementById("list").appendChild(newLi);
+    var inputText = prompt("Enter your name: ");
+    var newElement = document.createElement("li");
+    var createNew = document.createTextNode(inputText);
+    newElement.appendChild(createNew);
+    document.getElementById("list").appendChild(newElement);
   }
 
   //getElementStyle
@@ -48,33 +44,40 @@ function createElementEg() {
   
 
   //element.style.property
-  function changeColorHover(color) {
+  function changeColorHover(input) {
     var element = document.getElementById("colorHover");
-    element.style.color = color;
+    element.style.color = input;
+
   }
 
   //appendChild
-  function addItem() {
-    if(document.getElementById("todolist").childNodes.length > 3) {
-      alert("You already have 3 items!");
-    }
-    else {
-      var liText = prompt("Add: ");
-      var newLi = document.createElement("LI");
-      var createNew = document.createTextNode(liText);
-      newLi.appendChild(createNew);
-      document.getElementById("todolist").appendChild(newLi);
-    }
-  } 
+function addItem(){
+  if (document.getElementById("todolist").childNodes.length > 3){
+    alert("you already have 3 items");
+  }else{
+    var liText = prompt("Enter your name: ");
 
-  //removeChild
-  function removeItem() {
-    var list = document.getElementById("todolist");
-    list.removeChild(list.childNodes[0]);
+    var newLi = document.createElement("li");
+   
+    var createNew = document.createTextNode(newLi);
+
+
+    newLi.appendChild(createNew);
+    document.getElementById("todolist").appendChild(newLi);
   }
 
-  // This is a JavaScript object
-  var fruits = {
+}
+
+  //removeChild
+function removeItem(){
+  var list = document.getElementById("todolist");
+    while(list.firstchild){
+    }
+ }
+
+
+  // This is a JavaScript object // json
+  var fruits = { 
     0:{
       "name": "Apple",
       "price": 50,
@@ -97,23 +100,17 @@ function createElementEg() {
     }
   }
 
-  //print loop
-  function looper(input) {
-    var objectSize = 0;
-    while(objectSize < Object.keys(fruits).length){
-      var newLi = document.createElement("LI");
-      var fruitPrint = document.createTextNode(fruits[objectSize][input]);
-      newLi.setAttribute("id","fruitItem");
-      newLi.appendChild(fruitPrint);
-      document.getElementById("loopTest").appendChild(newLi);
-      objectSize++;
-    }
-  }
+
+/*  //print loop
+function looper(input){
+  var i =0;
+  while ( i < object.keys(fruits).length){
+    var newLi = document.createElement("li");
+    var fruitPrint = document.createTextNode(fruits[i][input]);
+    newLi.setAttribute("id", "fruitItem");
+    newLi.appendChild(fruitPrint);
+    document.getElementById("loopTest").appendChild(newLi);
+  
+}*/
 
   //clearing list
-  function clearFruits() {
-    var list = document.getElementById("loopTest");
-    while(list.firstChild){
-      list.removeChild(list.firstChild);
-    }
-  }
